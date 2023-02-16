@@ -3,7 +3,8 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Work Sans',
+    sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -27,6 +28,7 @@ body {
   padding: 50px;
   overflow: hidden;
   width: 95%;
+  margin: 0;
 }
 
 .img-thumbnail {
@@ -60,6 +62,9 @@ body {
 
 .card:hover .image {
   opacity: 0.5;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card:hover .middle {
@@ -98,6 +103,19 @@ body {
 
 .rate {
   color: #606063;
+}
+
+.item-desc {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.item-price {
+  font-weight: 300;
+}
+
+.item-top {
+  margin-top: 20px;
 }
 
 .hero-kategori {
@@ -145,13 +163,76 @@ body {
   filter: alpha(opacity=100);
 }
 
+.marq-head {
+  font-weight: 800;
+  font-size: 40px;
+  color: #ff9328;
+}
+
+.marq-desc {
+  color: #fff;
+  -webkit-text-stroke: 1px #ff9328;
+  font-weight: 800;
+  font-size: 40px;
+  margin-right: 60px;
+}
+
+.marq-inner {
+  left: -97%;
+  position: relative;
+}
+
+.marq-inner-right {
+  right: -97%;
+  position: relative;
+}
+
+.brand {
+  background-color: whitesmoke;
+}
+
+.container-phanda {
+  justify-content: space-between;
+}
+
+.phanda-wrap {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+}
+
+.no-border {
+  border: none;
+}
+
+.btn-brand {
+  margin-top: 20px;
+  border: 1px solid #000;
+  width: 40%;
+}
+
 
 @media (max-width:480px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    justify-content: center;
+  }
+
   .col-sm-3 {
     margin-top: 30px;
     margin-left: 50px;
   }
-  .hero-kategori {
-    margin-left: 25px;
+
+  .hero-kategori .row {
+    margin: 0;
+  }
+
+  .container-phanda {
+    display: flex;
+    flex-direction: column;
   }
 }
