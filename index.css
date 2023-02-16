@@ -9,6 +9,15 @@ body {
   margin: 0;
 }
 
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
 .banner {
   max-height: 600px;
 }
@@ -211,7 +220,25 @@ body {
   width: 40%;
 }
 
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
+.f-list {
+  padding: 0;
+}
+
+.pro {
+  padding: 1.25rem 90px;
+}
+.f-item{
+  cursor: pointer;
+  margin-top: 10px;
+}
+.foot-txt{
+  margin-left: 10px;
+}
 @media (max-width:480px) {
   #navbar {
     position: fixed;
@@ -234,5 +261,9 @@ body {
   .container-phanda {
     display: flex;
     flex-direction: column;
+  }
+
+  .pro {
+    padding: 1.25rem;
   }
 }
