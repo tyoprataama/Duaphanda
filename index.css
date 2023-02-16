@@ -8,7 +8,7 @@ body {
   margin: 0;
 }
 
-.banner{
+.banner {
   max-height: 600px;
 }
 
@@ -22,18 +22,22 @@ body {
 .card {
   border: none;
 }
-.row{
-  padding: 40px;
+
+.row {
+  padding: 50px;
   overflow: hidden;
+  width: 95%;
 }
 
 .img-thumbnail {
   border: 0.5px solid #bababa;
+  max-width: 300px;
 }
 
 .card {
   position: relative;
 }
+
 .image {
   opacity: 1;
   display: block;
@@ -70,19 +74,34 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal-footer{
+
+.modal-footer {
   display: flex;
   flex-direction: column;
 }
 
-.discount{
+.modal-body {
+  padding: 50px;
+  align-items: center;
+}
+
+.discount {
   text-decoration: line-through;
   color: rgb(185, 185, 185);
   margin-left: 10px;
 }
 
-@media  (max-width:480px) {
-  .col-sm-3{
+.star {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+.rate {
+  color: #606063;
+}
+
+@media (max-width:480px) {
+  .col-sm-3 {
     margin-top: 30px;
   }
 }
