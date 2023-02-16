@@ -1,4 +1,88 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.banner{
+  max-height: 600px;
+}
+
+.head-desc {
+  margin-top: 50px;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 0 30px;
+}
+
+.card {
+  border: none;
+}
+.row{
+  padding: 40px;
+  overflow: hidden;
+}
+
+.img-thumbnail {
+  border: 0.5px solid #bababa;
+}
+
+.card {
+  position: relative;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card:hover .image {
+  opacity: 0.5;
+}
+
+.card:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #000000;
+  color: white;
+  font-size: 16px;
+  padding: 10px 13px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-footer{
+  display: flex;
+  flex-direction: column;
+}
+
+.discount{
+  text-decoration: line-through;
+  color: rgb(185, 185, 185);
+  margin-left: 10px;
+}
+
+@media  (max-width:480px) {
+  .col-sm-3{
+    margin-top: 30px;
+  }
 }
