@@ -18,6 +18,10 @@ li {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .banner {
   max-height: 600px;
 }
@@ -34,9 +38,8 @@ li {
 }
 
 .row {
-  padding: 50px;
+  padding: 10px;
   overflow: hidden;
-  width: 95%;
   margin: 0;
 }
 
@@ -108,6 +111,15 @@ li {
 .star {
   font-size: 12px;
   color: rgb(243, 181, 25);
+}
+
+.facebook {
+  color: #4183ff;
+  font-size: 25px;
+}
+
+.rev-blue {
+  color: #119EFF;
 }
 
 .rate {
@@ -225,7 +237,12 @@ li {
   justify-content: center;
 }
 
+.col-6 {
+  margin-top: 30px;
+}
+
 .newSeason {
+  margin-top: 50px;
   display: flex;
   margin-bottom: 50px;
 }
@@ -404,13 +421,16 @@ li {
 .pro {
   padding: 1.25rem 90px;
 }
-.f-item{
+
+.f-item {
   cursor: pointer;
   margin-top: 10px;
 }
-.foot-txt{
+
+.foot-txt {
   margin-left: 10px;
 }
+
 @media (max-width:480px) {
   #navbar {
     position: fixed;
@@ -438,6 +458,7 @@ li {
   .pro {
     padding: 1.25rem;
   }
+
   .newSeason {
     flex-direction: column;
   }
@@ -445,6 +466,7 @@ li {
   .nsItem:nth-child(2) {
     padding: 50px;
   }
+
   .nsImg {
     width: 100%;
     height: 400px;
