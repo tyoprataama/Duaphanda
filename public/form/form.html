@@ -23,6 +23,13 @@
   <meta name="twitter:title" content="Duaphanda Clothes Official">
   <meta name="twitter:description" content="Duaphanda Clothes Official">
   <script src="https://kit.fontawesome.com/28b10db037.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("J26YFzqNdaiMvvyxe");
+    })();
+  </script>
 </head>
 
 <body>
@@ -41,33 +48,38 @@
         <p class="alert alert-warning" role="alert">Sebelum membeli dengan metode COD pastikan alamat Anda berdomisili
           di <strong> Kediri dan sekitarnya.</strong> Selain itu kami menyarankan pembelian dengan Shopee</p>
       </div>
-      <form>
+      <form id="form-register">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Nama Lengkap</label>
-            <input type="text" class="form-control" id="inputEmail4" placeholder="John Doe">
+            <input type="text" class="form-control" id="inputName" placeholder="John Doe">
+            <span class="error">Nama tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Nomor Whatsapp</label>
-            <input type="number" class="form-control" id="inputPassword4" placeholder="081234567890">
+            <input type="number" class="form-control" id="inputNumber" placeholder="081234567890">
+            <span class="error">Nomor Whatsapp tidak boleh kosong</span>
           </div>
         </div>
         <div class="form-group">
           <label for="inputAddress">Alamat</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="Jl.Mega Mendung No.14">
+          <span class="error">Alamat tidak boleh kosong</span>
         </div>
         <div class="form-group">
-          <label for="inputAddress2">Detail Alamat</label>
+          <label for="inputAddress2">Detail Alamat <span class="opsional">*opsional</span></label>
           <input type="text" class="form-control" id="inputAddress2" placeholder="Rumah warna putih">
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputCity">Kota</label>
             <input type="text" class="form-control" id="inputCity" placeholder="Kediri">
+            <span class="error">Kota tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-4">
             <label for="inputCity">Provinsi</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="Jawa Timur">
+            <input type="text" class="form-control" id="inputState" placeholder="Jawa Timur">
+            <span class="error">Provinsi tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-2">
             <label for="inputZip">Kode Pos</label>
@@ -76,28 +88,31 @@
           <hr>
           <div class="form-group col-md-4">
             <label for="inputState">Jenis Produk</label>
-            <select id="inputState" class="form-control">
+            <select id="inputProduct" class="form-control">
               <option selected>Polo</option>
               <option>Setelan</option>
               <option>Aksesoris</option>
             </select>
+            <span class="error">Produk tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-4">
             <label for="inputState">Ukuran</label>
-            <select id="inputState" class="form-control">
+            <select id="inputSize" class="form-control">
               <option selected>S</option>
               <option>M</option>
               <option>L</option>
               <option>XL</option>
             </select>
+            <span class="error">Ukuran tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-4">
-            <label for="inputState">Warna</label>
-            <select id="inputState" class="form-control">
+            <label for="input">Warna</label>
+            <select id="inputColor" class="form-control">
               <option selected>Merah</option>
               <option>Abu</option>
               <option>Kuning</option>
             </select>
+            <span class="error">Wana tidak boleh kosong</span>
           </div>
         </div>
         <div class="form-group">
@@ -109,10 +124,10 @@
           </div>
           <hr>
           <div class="wa-desc">
-          <span>Tim kami akan mengkonfirmasi order melalui nomor whatsapp yang sudah dicantumkan</span>
+            <span>Tim kami akan mengkonfirmasi order melalui nomor whatsapp yang sudah dicantumkan</span>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">COD</button>
+        <button type="submit" class="btn btn-primary btn-block" id="cod-btn" onclick="sendEmail()">COD</button>
       </form>
     </div>
     </div>
@@ -124,7 +139,8 @@
     </div>
   </section>
 
-
+  <script src="./form.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
