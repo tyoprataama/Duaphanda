@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans',
+    sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.breadcrumb {
+  background-color: #fff;
+  padding: 50px;
+}
+
+.desc {
+  text-align: center;
+}
+.container{
+  padding: 20px 50px;
+}
+.wa-desc{
+  padding: 10px;
+  color: #8b8b8b;
+}
