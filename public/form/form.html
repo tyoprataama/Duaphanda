@@ -127,9 +127,36 @@
             <span>Tim kami akan mengkonfirmasi order melalui nomor whatsapp yang sudah dicantumkan</span>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-block" id="cod-btn" onclick="sendEmail()">COD</button>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"
+          onclick=" sendEmail()">COD</button>
       </form>
     </div>
+    </div>
+  </section>
+
+  <section>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Order Berhasil</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Mohon tunggu 1 x 24jam untuk admin kami menghubungi Anda untuk mengkonfirmasi order yang Anda buat.
+            <hr>
+            Terimakasih telah berbelanja di Duaphanda ^-^
+          </div>
+          <div class="modal-footer">
+            <a href="../index.html">
+              <button type="button" class="btn btn-primary">Kembali ke halaman utama</button></a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
