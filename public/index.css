@@ -22,6 +22,15 @@ a {
   text-decoration: none;
 }
 
+#navbar {
+  z-index: 999;
+}
+
+.carousel-inner {
+  margin-top: -50px;
+  cursor: pointer;
+}
+
 .banner {
   max-height: 600px;
 }
@@ -92,9 +101,22 @@ a {
   cursor: pointer;
 }
 
+.btn-top {
+  padding: 10px 30px;
+  border: 1px solid #000;
+  margin-top: 10px;
+  width: 100%;
+}
+.top-right{
+  margin-left: 7px;
+}
+
 .modal-footer {
+  margin: 0;
+  justify-content: center;
   display: flex;
   flex-direction: column;
+  padding: 50px;
 }
 
 .modal-body {
@@ -187,12 +209,12 @@ a {
 .marq-head {
   font-weight: 800;
   font-size: 40px;
-  color: #ff9328;
+  color: #ff9442;
 }
 
 .marq-desc {
   color: #fff;
-  -webkit-text-stroke: 1px #ff9328;
+  -webkit-text-stroke: 1px #ff9442;
   font-weight: 800;
   font-size: 40px;
   margin-right: 60px;
@@ -239,6 +261,10 @@ a {
 
 .col-6 {
   margin-top: 30px;
+}
+
+#accordion{
+  padding: 10px 90px;
 }
 
 .newSeason {
@@ -449,14 +475,18 @@ a {
 .wa {
   margin-top: 15px;
 }
+
 @media (max-width:480px) {
   #navbar {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
     width: 100%;
     justify-content: center;
+  }
+
+  #hero-banner {
+    margin-top: 100px;
   }
 
   .col-sm-3 {
@@ -475,6 +505,10 @@ a {
 
   .pro {
     padding: 1.25rem;
+  }
+
+  #accordion {
+    padding: 5px 10px;
   }
 
   .newSeason {
