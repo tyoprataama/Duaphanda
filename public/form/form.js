@@ -99,7 +99,6 @@ function sendEmail() {
         document.getElementById("inputSize").value = "";
         document.getElementById("inputColor").value = "";
         console.log(res);
-        alert("Success")
       }
     )
     .catch((err) => alert(err))

@@ -27,10 +27,30 @@ a {
 }
 
 .carousel-inner {
-  margin-top: -50px;
+  margin-top: -45px;
   cursor: pointer;
 }
 
+.hero-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+.hero-desc {
+  text-align: center;
+  color: #8f9eae;
+}
+
+.txt-gray {
+  color: #677483;
+}
+
+.txt-wht {
+  color: #fff;
+  font-size: 9px;
+}
 
 .head-desc {
   margin-top: 50px;
@@ -175,12 +195,12 @@ a {
 .marq-head {
   font-weight: 800;
   font-size: 40px;
-  color: #ff9442;
+  color: #427eff;
 }
 
 .marq-desc {
   color: #fff;
-  -webkit-text-stroke: 1px #ff9442;
+  -webkit-text-stroke: 1px #ff4242;
   font-weight: 800;
   font-size: 40px;
   margin-right: 60px;
