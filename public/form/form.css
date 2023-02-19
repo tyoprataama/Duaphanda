@@ -47,12 +47,10 @@ a {
   font-size: 12px;
   display: none;
 }
-input {
+
+.form-control::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  opacity: 0.5;
+  color: rgb(212, 212, 212);
+  opacity: 1;
   /* Firefox */
-}
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: red;
 }

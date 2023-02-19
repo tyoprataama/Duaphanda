@@ -1,3 +1,69 @@
+//  Show error message when input is empty
+
+const nameInput = document.getElementById("inputName");
+const nameErrorMsg = document.getElementById("nameErr");
+const numInput = document.getElementById("inputNumber");
+const numErrorMsg = document.getElementById("numErr");
+const addInput = document.getElementById("inputAddress");
+const addErrorMsg = document.getElementById("addErr");
+const cityInput = document.getElementById("inputCity");
+const cityErrorMsg = document.getElementById("cityErr");
+const provInput = document.getElementById("inputState");
+const provErrorMsg = document.getElementById("provErr");
+
+nameInput.addEventListener("blur", function()  {
+  if(nameInput.value.trim() === "") {
+    nameErrorMsg.style.display = "block";
+  } else {
+    nameErrorMsg.style.display = "none";
+  }
+});
+
+numInput.addEventListener("blur", function () {
+  if (numInput.value.trim() === "") {
+    numErrorMsg.style.display = "block";
+  } else {
+    numErrorMsg.style.display = "none";
+  }
+});
+
+addInput.addEventListener("blur", function () {
+  if (addInput.value.trim() === "") {
+    addErrorMsg.style.display = "block";
+  } else {
+    addErrorMsg.style.display = "none";
+  }
+});
+
+cityInput.addEventListener("blur", function () {
+  if (cityInput.value.trim() === "") {
+    cityErrorMsg.style.display = "block";
+  } else {
+    cityErrorMsg.style.display = "none";
+  }
+});
+
+provInput.addEventListener("blur", function () {
+  if (provInput.value.trim() === "") {
+    provErrorMsg.style.display = "block";
+  } else {
+    provErrorMsg.style.display = "none";
+  }
+});
+
+//  Disabled button when checkbox not clicked
+const checkBox = document.getElementById("check");
+const buttonSubmit = document.getElementById("submit");
+
+checkBox.addEventListener("click", function(e) {
+  const val = e.currentTarget.value;
+  buttonSubmit.disabled = false;
+
+  if (val === "") {
+    buttonSubmit.disabled = true;
+  }
+});
+
 const form = document.querySelector('#form-register');
 form.addEventListener('submit', (event) => {
   event.preventDefault(); // prevent form from submitting

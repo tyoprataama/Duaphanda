@@ -53,18 +53,18 @@
           <div class="form-group col-md-6">
             <label for="inputEmail4">Nama Lengkap</label>
             <input type="text" class="form-control" id="inputName" placeholder="John Doe">
-            <span class="error">Nama tidak boleh kosong</span>
+            <span class="error" id="nameErr">Nama tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Nomor Whatsapp</label>
             <input type="number" class="form-control" id="inputNumber" placeholder="081234567890">
-            <span class="error">Nomor Whatsapp tidak boleh kosong</span>
+            <span class="error" id="numErr">Nomor Whatsapp tidak boleh kosong</span>
           </div>
         </div>
         <div class="form-group">
           <label for="inputAddress">Alamat</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="Jl.Mega Mendung No.14">
-          <span class="error">Alamat tidak boleh kosong</span>
+          <span class="error" id="addErr">Alamat tidak boleh kosong</span>
         </div>
         <div class="form-group">
           <label for="inputAddress2">Detail Alamat <span class="opsional">*opsional</span></label>
@@ -74,12 +74,12 @@
           <div class="form-group col-md-6">
             <label for="inputCity">Kota</label>
             <input type="text" class="form-control" id="inputCity" placeholder="Kediri">
-            <span class="error">Kota tidak boleh kosong</span>
+            <span class="error" id="cityErr">Kota tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-4">
             <label for="inputCity">Provinsi</label>
             <input type="text" class="form-control" id="inputState" placeholder="Jawa Timur">
-            <span class="error">Provinsi tidak boleh kosong</span>
+            <span class="error" id="provErr">Provinsi tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-2">
             <label for="inputZip">Kode Pos</label>
@@ -93,7 +93,7 @@
               <option>Setelan</option>
               <option>Aksesoris</option>
             </select>
-            <span class="error">Produk tidak boleh kosong</span>
+            <span class="error" id="prodErr">Produk tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-4">
             <label for="inputState">Ukuran</label>
@@ -103,7 +103,7 @@
               <option>L</option>
               <option>XL</option>
             </select>
-            <span class="error">Ukuran tidak boleh kosong</span>
+            <span class="error" id="szErr">Ukuran tidak boleh kosong</span>
           </div>
           <div class="form-group col-md-4">
             <label for="input">Warna</label>
@@ -112,13 +112,13 @@
               <option>Abu</option>
               <option>Kuning</option>
             </select>
-            <span class="error">Wana tidak boleh kosong</span>
+            <span class="error" id="colErr">Wana tidak boleh kosong</span>
           </div>
         </div>
         <div class="form-group">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
+            <input class="form-check-input" type="checkbox" id="check">
+            <label class="form-check-label" for="check">
               Dengan ini Anda menyetujui dan menjamin bahwa data diri yang dituliskan adalah benar.
             </label>
           </div>
@@ -127,7 +127,7 @@
             <span>Tim kami akan mengkonfirmasi order melalui nomor whatsapp yang sudah dicantumkan</span>
           </div>
         </div>
-        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal" id="submit" disabled
           onclick=" sendEmail()">COD</button>
       </form>
     </div>
@@ -165,6 +165,7 @@
       <small class="text-muted">DUAPHANDA &copy; 2023 | All rights reserved</small>
     </div>
   </section>
+
 
   <script src="./form.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
