@@ -33,10 +33,8 @@ function sendEmail() {
         document.getElementById("inputSize").value = "";
         document.getElementById("inputColor").value = "";
         console.log(res);
-        alert("Order kamu berhasil, tim kami akan menghubungimu melalui nomor whatsapp untuk konfirmasi order ^-^")
+        alert("Success")
       }
     )
-    .catch((err) => console.log(err))
+    .catch((err) => alert(err))
 }
-
-console.log("bismillah");
