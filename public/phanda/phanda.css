@@ -98,9 +98,12 @@ a {
 }
 
 .top-right {
-  margin-left: 7px;
+  margin-left: 4px;
 }
 
+.shpee {
+  margin-top: 10px;
+}
 .modal-footer {
   margin: 0;
   justify-content: center;
